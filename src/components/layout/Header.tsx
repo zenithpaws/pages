@@ -3,22 +3,17 @@
 import { Button, Header as MantineHeader, Menu, Modal, Text, TextInput } from '@mantine/core';
 import {
   HiCommandLine,
-  HiOutlineChatBubbleLeftRight,
   HiOutlineHome,
   HiOutlineInformationCircle,
   HiOutlinePaperAirplane,
   HiOutlineRectangleGroup,
-  HiOutlineWrenchScrewdriver,
   HiPaperAirplane,
   HiRectangleGroup,
-  HiWrenchScrewdriver,
 } from 'react-icons/hi2';
 import { useEffect, useState } from 'react';
 
 import { CgFormatSlash } from 'react-icons/cg';
-import { HiOutlineMoon } from 'react-icons/hi';
 import Link from 'next/link';
-import { SiGithub } from 'react-icons/si';
 import styles from './Header.module.css';
 
 type Command = {

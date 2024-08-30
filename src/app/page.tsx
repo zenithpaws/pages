@@ -1,6 +1,5 @@
 'use client';
 
-import { HiOutlineInformationCircle } from 'react-icons/hi';
 import { Image, Text, Title } from '@mantine/core';
 import { SiTelegram, SiGithub, SiApplemusic, SiDiscord, SiGit, SiVisualstudiocode } from 'react-icons/si';
 
