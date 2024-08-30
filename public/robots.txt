@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https:/www.zenithpaws.dev
+Host: https://zenithpaws.dev
 
 # Sitemaps
-Sitemap: https:/www.zenithpaws.dev/sitemap.xml
+Sitemap: https://zenithpaws.dev/sitemap.xml
