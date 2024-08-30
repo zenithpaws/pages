@@ -1,9 +1,10 @@
+// next-sitemap.config.js
 module.exports = {
     siteUrl: 'https://zenithpaws.dev', // Replace with your site URL
     generateRobotsTxt: true,
     priority: 0.7, // Default priority for all pages
     changefreq: 'daily', // Default change frequency
-    sitemapSize: 5000, // Default max size of the sitemap
+    sitemapSize: 5000, // Ensure this is high to avoid splitting
     exclude: ['/404'], // Exclude certain paths (optional)
     transform: async (config, path) => {
         if (path === '/') {
@@ -22,5 +23,9 @@ module.exports = {
             changefreq: config.changefreq,
             lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
         };
-    }
+    },
+    // Specify filename to avoid sitemap index
+    sitemapFilename: 'sitemap.xml',
+    // Avoid using sitemap index
+    generateIndexSitemap: false,
 };
