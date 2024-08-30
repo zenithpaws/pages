@@ -3,10 +3,6 @@
 import { Title, Text } from '@mantine/core';
 import { Header } from '@/components/layout/Header';
 
-// set theme
-localStorage.setItem('theme', 'dark');
-document.documentElement.setAttribute('data-theme', 'dark');
-
 const About = () => {
   return (
     <>
