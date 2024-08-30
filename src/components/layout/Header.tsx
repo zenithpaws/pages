@@ -1,15 +1,7 @@
 'use client';
 
 import { Button, Header as MantineHeader, Menu, Modal, Text, TextInput } from '@mantine/core';
-import {
-  HiCommandLine,
-  HiOutlineHome,
-  HiOutlineInformationCircle,
-  HiOutlinePaperAirplane,
-  HiOutlineRectangleGroup,
-  HiPaperAirplane,
-  HiRectangleGroup,
-} from 'react-icons/hi2';
+import { HiCommandLine, HiOutlineHome, HiOutlineInformationCircle, HiOutlinePaperAirplane, HiOutlineRectangleGroup, HiPaperAirplane, HiRectangleGroup } from 'react-icons/hi2';
 import { useEffect, useState } from 'react';
 
 import { CgFormatSlash } from 'react-icons/cg';
@@ -130,7 +122,10 @@ export const Header: React.FC<object> = (): JSX.Element => {
               <CgFormatSlash className='text-2xl text-invert-secondary' />
             </div>
             <p className='float-left hidden font-jakarta text-[19px] font-bold sm:block'>
-              <span className='text-primary'>zenithpaws</span><span className='text-accent-secondary'>.dev</span></p></Link>
+              <span className='text-primary'>zenithpaws</span>
+              <span className='text-accent-secondary'>.dev</span>
+            </p>
+          </Link>
 
           <Link className='float-left ml-4 sm:ml-6' href='/about'>
             <p className='float-left font-jakarta text-xs font-semibold sm:text-sm'>
@@ -139,14 +134,13 @@ export const Header: React.FC<object> = (): JSX.Element => {
           </Link>
 
           <div className='hidden items-center md:flex'>
-
             <Link className='float-left ml-8' href='/projects'>
               <p className='float-left font-jakarta text-sm font-semibold'>
                 <span className='text-accent-secondary transition-colors hover:text-accent-secondary-hover'>Projects</span>
               </p>
             </Link>
 
-            <div className='mx-3 h-[3px] w-[3px] rounded-[50%] bg-[rgb(var(--text-secondary))]'></div>
+            <div className='mx-3 size-[3px] rounded-[50%] bg-[rgb(var(--text-secondary))]'></div>
 
             <Link className='float-left' href='/contact'>
               <p className='float-left font-jakarta text-sm font-semibold'>
@@ -169,21 +163,17 @@ export const Header: React.FC<object> = (): JSX.Element => {
                 color: 'rgb(var(--text-primary))',
                 padding: '2rem',
               },
-            }}
-          >
-
+            }}>
             <Menu.Dropdown className='p-2'>
               <Menu.Item
                 className='rounded-lg bg-transparent font-jakarta font-semibold text-accent-secondary transition-colors hover:bg-[rgba(var(--background-accent-primary-hover),0.2)] hover:text-accent-secondary-hover'
-                icon={<HiRectangleGroup />}
-              >
+                icon={<HiRectangleGroup />}>
                 <Link href='/projects'>Projects</Link>
               </Menu.Item>
 
               <Menu.Item
                 className='rounded-lg bg-transparent font-jakarta font-semibold text-accent-secondary transition-colors hover:bg-[rgba(var(--background-accent-primary-hover),0.2)] hover:text-accent-secondary-hover'
-                icon={<HiPaperAirplane />}
-              >
+                icon={<HiPaperAirplane />}>
                 <Link href='/contact'>Contact</Link>
               </Menu.Item>
             </Menu.Dropdown>
@@ -193,17 +183,16 @@ export const Header: React.FC<object> = (): JSX.Element => {
           <Button
             unstyled
             aria-label='Open command palette'
-            className='mr-4 h-10 translate-y-0 rounded-lg bg-secondary px-3 font-sans font-semibold text-primary transition-colors hover:bg-secondary active:translate-y-[1px]'
+            className='mr-4 h-10 translate-y-0 rounded-lg bg-secondary px-3 font-sans font-semibold text-primary transition-colors hover:bg-secondary active:translate-y-px'
             onClick={() => {
               setOpened(true);
-            }}
-          >
+            }}>
             <div className='flex items-center'>
               <HiCommandLine className='inline-block items-center text-sm' />
               <span className='ml-2 hidden text-sm font-medium lg:inline-block'>Command Palette</span>
-              <span className='pointer-events-none ml-3 hidden rounded-sm border border-b-[2px] border-primary bg-primary p-1 py-[4px] font-mono text-3xs text-primary lg:inline-block'>CTRL</span>
+              <span className='pointer-events-none ml-3 hidden rounded-sm border border-b-2 border-primary bg-primary p-1 py-[4px] font-mono text-3xs text-primary lg:inline-block'>CTRL</span>
               <span className='ml-1 hidden pb-1 text-3xs lg:inline-block'>+</span>
-              <span className='pointer-events-none ml-1 hidden rounded-sm border border-b-[2px] border-primary bg-primary p-1 py-[4px] font-mono text-3xs text-primary lg:inline-block'>P</span>
+              <span className='pointer-events-none ml-1 hidden rounded-sm border border-b-2 border-primary bg-primary p-1 py-[4px] font-mono text-3xs text-primary lg:inline-block'>P</span>
             </div>
           </Button>
         </div>
@@ -226,8 +215,7 @@ export const Header: React.FC<object> = (): JSX.Element => {
         opened={opened}
         p={1}
         withCloseButton={false}
-        onClose={() => setOpened(false)}
-      >
+        onClose={() => setOpened(false)}>
         <TextInput
           styles={{
             input: {

@@ -18,6 +18,7 @@ module.exports = {
   },
   plugins: ['@typescript-eslint/eslint-plugin', 'prettier'],
   rules: {
+    "@next/next/no-html-link-for-pages": ["error", "src/app/"],
     '@typescript-eslint/no-non-null-assertion': [0],
     '@typescript-eslint/no-unused-vars': [
       2,
@@ -28,7 +29,7 @@ module.exports = {
     ],
     '@typescript-eslint/triple-slash-reference': [0],
     'jsx-quotes': [2, 'prefer-single'],
-    'linebreak-style': [2, 'unix'],
+    'linebreak-style': [0],
     'max-len': [2, 300],
     'new-cap': [0],
     'no-invalid-this': [0],
@@ -61,7 +62,7 @@ module.exports = {
         callbacksLast: true,
         ignoreCase: true,
         multiline: 'first',
-        noSortAlphabetically: false,
+        noSortAlphabetically: true,
         reservedFirst: true,
         shorthandFirst: true,
         shorthandLast: false,

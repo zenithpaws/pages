@@ -11,7 +11,6 @@ import styles from './page.module.css';
  * @description - The home page (/).
  * @return {JSX.Element} - The home page.
  */
-
 export default function Home() {
   return (
     <>
@@ -19,8 +18,8 @@ export default function Home() {
 
       <main className='m-0 flex items-center justify-center p-0'>
         <div className={`${styles.grid} absolute left-0 top-0 -z-50 m-0 h-[40rem] w-full p-0`}>
-          <div className='relative h-full w-full'>
-            <div className={`${styles.gridInner} absolute h-full w-full`}></div>
+          <div className='relative size-full'>
+            <div className={`${styles.gridInner} absolute size-full`}></div>
           </div>
         </div>
 
@@ -28,11 +27,15 @@ export default function Home() {
           <div className={`${styles.slideFromLeft} md:ml-8 lg:mr-12 lg:mt-16`}>
             {/* eslint-disable-next-line tailwindcss/no-contradicting-classname */}
             <Title className='mt-10 font-jakarta text-[1.9rem] font-medium tracking-normal text-primary antialiased sm:text-[3rem] md:text-[4rem] xl:text-[4.5rem]'>
-              <span>Heya! I'm </span><span className={`${styles.name}`}>Ryzen</span></Title>
+              <span>Heya! I&#39;m </span>
+              <span className={`${styles.name}`}>Ryzen</span>
+            </Title>
 
             {/* eslint-disable-next-line tailwindcss/no-contradicting-classname */}
             <Text className='mt-2 w-full font-jakarta text-[0.95rem] font-medium text-secondary md:mt-4 md:w-9/12 md:text-[1.25rem] md:font-light xl:text-[1.35rem]'>
-              A young <span className={`${styles.bolded}`}>Python developer</span> and <span className={`${styles.bolded}`}>tech enthusiast</span> interested in <span className={`${styles.bolded}`}>retro technology </span> and <span className={`${styles.bolded}`}>astronomy</span></Text>
+              A young <span className={`${styles.bolded}`}>Python developer</span> and <span className={`${styles.bolded}`}>tech enthusiast</span>
+              <span>interested in</span> <span className={`${styles.bolded}`}>retro technology </span> and <span className={`${styles.bolded}`}>astronomy</span>
+            </Text>
 
             <div className='mt-8 flex flex-row items-center md:mt-[3.25rem]'>
               {/* eslint-disable-next-line max-len */}
@@ -48,19 +51,19 @@ export default function Home() {
               <Text className='font-jakarta text-[13px] text-primary'>My favorite tools and software</Text>
               <div className='mt-3 flex flex-row items-center gap-3 text-2xl text-secondary md:gap-4 md:text-[27px]'>
                 <SiVisualstudiocode className={`${styles.techIcon} hover:text-[#00a1f1]`} />
-                <a href="https:/github.com/zenithpaws" target="_blank" rel="noopener noreferrer">
+                <a href='https:/github.com/zenithpaws' target='_blank' rel='noopener noreferrer'>
                   <SiGithub className={`${styles.techIcon} hover:text-[#211F1F]`} />
                 </a>
                 <SiGit className={`${styles.techIcon} hover:text-[#f1502f]`} />
                 <div className={`${styles.techIcon} h-3 w-0 border-r border-r-[rgb(var(--text-secondary))]`} />
-                <a href="https://discord.com/users/487638433179762688" target="_blank" rel="noopener noreferrer">
+                <a href='https://discord.com/users/487638433179762688' target='_blank' rel='noopener noreferrer'>
                   <SiDiscord className={`${styles.techIcon} hover:text-[#5865F2]`} />
                 </a>
-                <a href="https://t.me/zenithpaws" target="_blank" rel="noopener noreferrer">
+                <a href='https://t.me/zenithpaws' target='_blank' rel='noopener noreferrer'>
                   <SiTelegram className={`${styles.techIcon} hover:text-[#27A7E7]`} />
                 </a>
                 <div className={`${styles.techIcon} h-3 w-0 border-r border-r-[rgb(var(--text-secondary))]`} />
-                <a href="https://music.apple.com/profile/zenithpaws" target="_blank" rel="noopener noreferrer">
+                <a href='https://music.apple.com/profile/zenithpaws' target='_blank' rel='noopener noreferrer'>
                   <SiApplemusic className={`${styles.techIcon} hover:text-[#f94c57]`} />
                 </a>
               </div>
@@ -77,7 +80,7 @@ export default function Home() {
                 },
               }}
               alt='Developer'
-              className='mt-16 !h-[30rem] !w-[30rem] rounded-full object-cover xl:-mt-4 xl:!h-[42rem] xl:!w-[42rem]'
+              className='mt-16 !h-120 !w-120 rounded-full object-cover xl:-mt-4 xl:!h-[42rem] xl:!w-[42rem]'
               src='/kiro.png'
               width='100%'
             />
