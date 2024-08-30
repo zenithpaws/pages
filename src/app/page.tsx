@@ -34,7 +34,7 @@ export default function Home() {
             {/* eslint-disable-next-line tailwindcss/no-contradicting-classname */}
             <Text className='mt-2 w-full font-jakarta text-[0.95rem] font-medium text-secondary md:mt-4 md:w-9/12 md:text-[1.25rem] md:font-light xl:text-[1.35rem]'>
               A young <span className={`${styles.bolded}`}>Python developer</span> and <span className={`${styles.bolded}`}>tech enthusiast</span>
-              <span>interested in</span> <span className={`${styles.bolded}`}>retro technology </span> and <span className={`${styles.bolded}`}>astronomy</span>
+              <span> interested in</span> <span className={`${styles.bolded}`}>retro technology </span> and <span className={`${styles.bolded}`}>astronomy</span>
             </Text>
 
             <div className='mt-8 flex flex-row items-center md:mt-[3.25rem]'>
