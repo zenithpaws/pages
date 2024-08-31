@@ -23,40 +23,40 @@ const commands: Command[] = [
       return;
     },
     icon: <HiOutlineHome className='ml-4 text-lg text-primary' />,
+    link: '/',
     name: 'Home',
     right: <></>,
-    tag: 'goto navigate go to home /',
-    link: '/',
+    tag: 'goto navigate go to home /'
   },
   {
     click: () => {
       return;
     },
     icon: <HiOutlineInformationCircle className='ml-4 text-lg text-primary' />,
-    name: 'Navigate to /about',
+    link: '/about',
+    name: 'About me (/about)',
     right: <></>,
     tag: 'goto navigate go to about /about',
-    link: '/about',
   },
   {
     click: () => {
       return;
     },
     icon: <HiOutlinePaperAirplane className='ml-4 -rotate-45 text-lg text-primary' />,
-    name: 'Navigate to /contact',
+    link: '/contact',
+    name: 'Where you can find me (/contact)',
     right: <></>,
     tag: 'goto navigate go to contact /contact',
-    link: '/contact',
   },
   {
     click: () => {
       return;
     },
     icon: <HiOutlineRectangleGroup className='ml-4 text-lg text-primary' />,
-    name: 'Navigate to /projects',
+    link: '/projects',
+    name: 'My projects (/projects)',
     right: <></>,
     tag: 'goto navigate go to project projects /project /projects',
-    link: '/projects',
   },
 ];
 
@@ -243,7 +243,7 @@ export const Header: React.FC<object> = (): JSX.Element => {
         <div className={`${styles.header} max-h-[500px] overflow-auto`}>
           {commands.map((command) =>
             query.split(' ').every((value) => command.tag.includes(value)) ? (
-              <Link key={command.tag} href={command.link} passHref>
+              <Link key={command.tag} passHref href={command.link}>
                 <div className='relative flex h-10 cursor-pointer flex-row items-center hover:bg-primary-hover'>
                   {command.icon}
                   <Text className='ml-3 font-jakarta text-sm text-primary'>{command.name}</Text>
