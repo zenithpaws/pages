@@ -14,6 +14,7 @@ type Command = {
   name: string;
   right: JSX.Element;
   tag: string;
+  link: string;
 };
 
 const commands: Command[] = [
@@ -25,6 +26,7 @@ const commands: Command[] = [
     name: 'Home',
     right: <></>,
     tag: 'goto navigate go to home /',
+    link: '/',
   },
   {
     click: () => {
@@ -34,6 +36,7 @@ const commands: Command[] = [
     name: 'Navigate to /about',
     right: <></>,
     tag: 'goto navigate go to about /about',
+    link: '/about',
   },
   {
     click: () => {
@@ -43,6 +46,7 @@ const commands: Command[] = [
     name: 'Navigate to /contact',
     right: <></>,
     tag: 'goto navigate go to contact /contact',
+    link: '/contact',
   },
   {
     click: () => {
@@ -52,6 +56,7 @@ const commands: Command[] = [
     name: 'Navigate to /projects',
     right: <></>,
     tag: 'goto navigate go to project projects /project /projects',
+    link: '/projects',
   },
 ];
 
@@ -238,12 +243,15 @@ export const Header: React.FC<object> = (): JSX.Element => {
         <div className={`${styles.header} max-h-[500px] overflow-auto`}>
           {commands.map((command) =>
             query.split(' ').every((value) => command.tag.includes(value)) ? (
-              <div key={command.tag} className='relative flex h-10 cursor-pointer flex-row items-center hover:bg-primary-hover' onClick={() => command.click()}>
-                {command.icon} <Text className='ml-3 font-jakarta text-sm text-primary'>{command.name}</Text>
-                <div className='absolute right-0 mr-3 flex items-center'>{command.right}</div>
-              </div>
+              <Link key={command.tag} href={command.link} passHref>
+                <div className='relative flex h-10 cursor-pointer flex-row items-center hover:bg-primary-hover'>
+                  {command.icon}
+                  <Text className='ml-3 font-jakarta text-sm text-primary'>{command.name}</Text>
+                  <div className='absolute right-0 mr-3 flex items-center'>{command.right}</div>
+                </div>
+              </Link>
             ) : (
-              <> </>
+              <></>
             )
           )}
         </div>

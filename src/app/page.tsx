@@ -50,7 +50,7 @@ export default function Home() {
               <Text className='font-jakarta text-[13px] text-primary'>My favorite tools and software</Text>
               <div className='mt-3 flex flex-row items-center gap-3 text-2xl text-secondary md:gap-4 md:text-[27px]'>
                 <SiVisualstudiocode className={`${styles.techIcon} hover:text-[#00a1f1]`} />
-                <a href='https:/github.com/zenithpaws' target='_blank' rel='noopener noreferrer'>
+                <a href='https://github.com/zenithpaws' target='_blank' rel='noopener noreferrer'>
                   <SiGithub className={`${styles.techIcon} hover:text-[#211F1F]`} />
                 </a>
                 <SiGit className={`${styles.techIcon} hover:text-[#f1502f]`} />
