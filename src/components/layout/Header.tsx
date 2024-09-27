@@ -132,58 +132,58 @@ export const Header: React.FC<object> = (): JSX.Element => {
             </p>
           </Link>
 
-          <Link className='float-left ml-4 sm:ml-6' href='/about'>
-            <p className='float-left font-jakarta text-xs font-semibold sm:text-sm'>
-              <span className='text-accent-primary transition-colors hover:text-accent-primary-hover'>About</span>
+          <Link className='float-left ml-8' href='/about'>
+            <p className='float-left font-jakarta text-sm font-semibold'>
+            <span className='text-accent-secondary transition-colors hover:text-accent-secondary-hover'>About</span>
             </p>
           </Link>
 
-          <div className='hidden items-center md:flex'>
-            <Link className='float-left ml-8' href='/projects'>
-              <p className='float-left font-jakarta text-sm font-semibold'>
-                <span className='text-accent-secondary transition-colors hover:text-accent-secondary-hover'>Projects</span>
-              </p>
-            </Link>
+          <div className='mx-3 size-[3px] rounded-[50%] bg-[rgb(var(--text-secondary))]'></div>
 
-            <div className='mx-3 size-[3px] rounded-[50%] bg-[rgb(var(--text-secondary))]'></div>
+          <Link className='float-left' href='/projects'>
+            <p className='float-left font-jakarta text-sm font-semibold'>
+              <span className='text-accent-secondary transition-colors hover:text-accent-secondary-hover'>Projects</span>
+            </p>
+          </Link>
 
-            <Link className='float-left' href='/contact'>
-              <p className='float-left font-jakarta text-sm font-semibold'>
-                <span className='text-accent-secondary transition-colors hover:text-accent-secondary-hover'>Contact</span>
-              </p>
-            </Link>
-          </div>
+          <div className='mx-3 size-[3px] rounded-[50%] bg-[rgb(var(--text-secondary))]'></div>
 
-          <Menu
-            styles={{
-              dropdown: {
-                '.mantine-Menu-item[data-hovered=true]': {
-                  backgroundColor: 'rgba(var(--background-accent-secondary),0.25)',
-                  color: 'rgb(var(--text-accent-hover))',
-                },
-                backdropFilter: 'blur(10px)',
-                backgroundColor: 'rgba(var(--background-secondary), 0.75)',
-                border: '1px solid rgb(var(--border-primary))',
-                borderRadius: '0.5rem',
-                color: 'rgb(var(--text-primary))',
-                padding: '2rem',
-              },
-            }}>
-            <Menu.Dropdown className='p-2'>
-              <Menu.Item
-                className='rounded-lg bg-transparent font-jakarta font-semibold text-accent-secondary transition-colors hover:bg-[rgba(var(--background-accent-primary-hover),0.2)] hover:text-accent-secondary-hover'
-                icon={<HiRectangleGroup />}>
-                <Link href='/projects'>Projects</Link>
-              </Menu.Item>
-
-              <Menu.Item
-                className='rounded-lg bg-transparent font-jakarta font-semibold text-accent-secondary transition-colors hover:bg-[rgba(var(--background-accent-primary-hover),0.2)] hover:text-accent-secondary-hover'
-                icon={<HiPaperAirplane />}>
-                <Link href='/contact'>Contact</Link>
-              </Menu.Item>
-            </Menu.Dropdown>
-          </Menu>
+          <Link className='float-left' href='/contact'>
+            <p className='float-left font-jakarta text-sm font-semibold'>
+              <span className='text-accent-secondary transition-colors hover:text-accent-secondary-hover'>Contact</span>
+            </p>
+          </Link>
         </div>
+
+        <Menu
+          styles={{
+            dropdown: {
+              '.mantine-Menu-item[data-hovered=true]': {
+                backgroundColor: 'rgba(var(--background-accent-secondary),0.25)',
+                color: 'rgb(var(--text-accent-hover))',
+              },
+              backdropFilter: 'blur(10px)',
+              backgroundColor: 'rgba(var(--background-secondary), 0.75)',
+              border: '1px solid rgb(var(--border-primary))',
+              borderRadius: '0.5rem',
+              color: 'rgb(var(--text-primary))',
+              padding: '2rem',
+            },
+          }}>
+          <Menu.Dropdown className='p-2'>
+            <Menu.Item
+              className='rounded-lg bg-transparent font-jakarta font-semibold text-accent-secondary transition-colors hover:bg-[rgba(var(--background-accent-primary-hover),0.2)] hover:text-accent-secondary-hover'
+              icon={<HiRectangleGroup />}>
+              <Link href='/projects'>Projects</Link>
+            </Menu.Item>
+
+            <Menu.Item
+              className='rounded-lg bg-transparent font-jakarta font-semibold text-accent-secondary transition-colors hover:bg-[rgba(var(--background-accent-primary-hover),0.2)] hover:text-accent-secondary-hover'
+              icon={<HiPaperAirplane />}>
+              <Link href='/contact'>Contact</Link>
+            </Menu.Item>
+          </Menu.Dropdown>
+        </Menu>
         <div className='flex items-center'>
           <Button
             unstyled

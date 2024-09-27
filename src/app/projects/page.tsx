@@ -7,7 +7,7 @@ const About = () => {
   return (
     <>
       <Header />
-      <title>Ryzen • About Me</title>
+      <title>Ryzen • Projects</title>
     </>
   );
 };

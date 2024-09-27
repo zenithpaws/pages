@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <a rel='me' href='https://yip.gay/@zenithpaws'>Mastodon</a>
+      <title>Ryzen • zenithpaws.dev</title>
       <main className='m-0 flex items-center justify-center p-0'>
         <div className={`${styles.grid} absolute left-0 top-0 -z-50 m-0 h-[40rem] w-full p-0`}>
           <div className='relative size-full'>
