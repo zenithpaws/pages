@@ -1,7 +1,7 @@
 'use client';
 
 import { Text, Title } from '@mantine/core';
-import { SiInstagram, SiModrinth, SiLinktree, SiMastodon, SiTiktok, SiYoutube, SiTwitter, SiTwitch, SiTelegram, SiGithub, SiApplemusic, SiDiscord, SiLastdotfm, SiXbox, SiEpel, SiEpicgames, SiReddit, SiSteam } from 'react-icons/si';
+import { SiInstagram, SiModrinth, SiLinktree, SiMastodon, SiTiktok, SiYoutube, SiTwitter, SiTwitch, SiTelegram, SiGithub, SiApplemusic, SiDiscord, SiLastdotfm, SiXbox, SiEpicgames, SiReddit, SiSteam } from 'react-icons/si';
 
 import { Header } from '@/components/layout/Header';
 import styles from './page.module.css';
