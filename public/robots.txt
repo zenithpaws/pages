@@ -4,3 +4,6 @@ Allow: /
 
 # Host
 Host: https://www.zenithpaws.dev
+
+# Sitemaps
+Sitemap: https://www.zenithpaws.dev/sitemap.xml
